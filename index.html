@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"] {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body> 
+    <h1>De Madrid al cielo</h1>
+    <ul>
+        <li>Eventos de carácter musical (conciertos, tablao flamenco, teatros musicales) <a href="musical.html">Musical</a></li>
+        <li>Eventos de carácter Cultural (teatro, visitas guiadas, ) <a href="cultural.html">Cultural</a></li>
+        <li>Eventos de carácter deportivo (entradas para partidos, rutas en la sierra, ) <a href="deportivo.html">Deportivo</a></li>
+    </ul>
+    <form action="URL absoluta o relativa" method="get o post">
+        <h2>Realice una reserva</h2>
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="name_id">Nombre:</label><br>
+            <input type="text" id="name_id" name="nombre" required><br>
+            <label for="phone_id">Teléfono:</label><br>
+            <input type="text" id="phone_id" name="telefono" required><br>
+            <label for="email_id">Email:</label><br>
+            <input type="text" id="email_id" name="email" required><br>
+        </fieldset>
+        <fieldset>
+            <legend>Evento</legend>
+            <label for="fecha_id">Fecha:</label><br>
+            <input type="date" id="fecha_id" name="fecha"><br>
+            <label for="tipo_id">Tipo:</label><br>
+            <select id="tipo_id" name="tipo">
+                <option value="Musical">Musical</option>
+                <option value="Deportivo">Deportivo</option>
+                <option value="Cultural">Cultural</option>
+            </select><br>
+            <label for="nombre_evento_id">Nombre del evento:</label><br>
+            <input type="text" id="nombre_evento_id" name="nombre_evento"><br> <!-- Cuadro de texto para el nombre del evento -->
+            <label for="numeropersonas_id">Número de personas:</label><br>
+            <input type="number" id="numeropersonas_id" name="numeropersonas" min="1"><br>
+            <p>Descuentos aplicables:</p>
+            <ul>
+                <li><input type="checkbox" id="descuento-1_id" name="descuento1"><label for="descuento-1_id">Familia numerosa</label></li>
+                <li><input type="checkbox" id="descuento-2_id" name="descuento2"><label for="descuento-2_id">Carnet de estudiante</label></li>
+                <li><input type="checkbox" id="descuento-3_id" name="descuento3"><label for="descuento-3_id">Discapacidad</label></li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Cancelar">
+        </fieldset>
+    </form>
+</body>
+</html>
